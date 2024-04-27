@@ -1,16 +1,20 @@
-# freezed_bloc
 
-A new Flutter project.
+# Flutter Bloc Freezed
 
-## Getting Started
+A Flutter practice project utilizing the bloc, freezed, getit, injectable and dio libraries.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🔗 Package Links
+
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc/)
+- [Dio](https://pub.dev/packages/dio)
+- [Freezed](https://pub.dev/packages/freezed)
+- [GetIt](https://pub.dev/packages/get_it)
+- [Injectable](https://pub.dev/packages/injectable)
+- [Injectable Generator](https://pub.dev/packages/injectable_generator)
+- [Build Runner](https://pub.dev/packages/build_runner)
+
+
+
