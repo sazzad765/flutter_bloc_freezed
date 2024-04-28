@@ -1,3 +1,4 @@
+import 'package:freezed_bloc/di/service_di.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
@@ -13,7 +14,8 @@ final di = GetIt.instance;
 mixin InjectionService {
   static void initInjection() => di.init();
 
-  static Future<void> config() async{
+  static Future<void> config() async {
+    await setupServiceModule();
     initInjection();
   }
 }

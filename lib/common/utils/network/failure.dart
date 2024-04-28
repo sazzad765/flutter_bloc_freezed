@@ -50,7 +50,7 @@ class Failure with _$Failure {
   }) = SerializationException;
 
   static Failure mapDioException(
-    Exception exception,
+      Object? exception,
   ) {
     try {
       if (exception is DioException) {

@@ -1,5 +1,5 @@
-import 'package:freezed_bloc/common/utils/failure.dart';
-import 'package:freezed_bloc/common/utils/result.dart';
+import 'package:freezed_bloc/common/utils/network/failure.dart';
+import 'package:freezed_bloc/common/utils/network/result.dart';
 import 'package:freezed_bloc/domain/repository/product_repo.dart';
 import 'package:freezed_bloc/model/product.dart';
 
