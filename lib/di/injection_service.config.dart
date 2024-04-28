@@ -15,6 +15,7 @@ import '../common/network/dio_client.dart' as _i5;
 import '../data/repository/product_repo_impl.dart' as _i4;
 import '../domain/repository/product_repo.dart' as _i3;
 import '../domain/usecase/product/get_product_use_case.dart' as _i6;
+import '../domain/usecase/product/update_product_use_case.dart' as _i7;
 
 extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -31,6 +32,8 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i4.ProductRepositoryImpl(gh<_i5.DioClient>()));
     gh.lazySingleton<_i6.GetProductUseCase>(
         () => _i6.GetProductUseCase(gh<_i3.ProductRepository>()));
+    gh.lazySingleton<_i7.UpdateProductUseCase>(
+        () => _i7.UpdateProductUseCase(gh<_i3.ProductRepository>()));
     return this;
   }
 }

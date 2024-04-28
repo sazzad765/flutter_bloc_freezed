@@ -14,25 +14,26 @@ class ProductRepositoryImpl extends ProductRepository {
 
   final DioClient _dioClient;
 
-  // @override
-  // Future<List<Product>> fetchProduct() async {
-  //   await Future.delayed(const Duration(seconds: 2));
-  //   final source = await rootBundle.loadString(DemoData.products);
-  //   final data = await json.decode(source);
-  //   return List<Product>.from(data.map((x) => Product.fromJson(x)));
-  //   // try {
-  //   //
-  //   // } catch (e) {
-  //   //   throw e;
-  //   // }
-  // }
-
   @override
   Future<List<Product>> fetchProduct() async {
     try {
       final response = await _dioClient.get('products');
       final data = response.data['products'];
       return List<Product>.from(data.map((x) => Product.fromJson(x)));
+    } catch (e) {
+      throw Failure.mapDioException(e);
+    }
+  }
+
+  @override
+  Future<Product> updateProduct({
+    required int id,
+    required Map<String, dynamic> body,
+  }) async {
+    try {
+      final response = await _dioClient.put('products/$id', data: body);
+      final data = response.data;
+      return Product.fromJson(data);
     } catch (e) {
       throw Failure.mapDioException(e);
     }

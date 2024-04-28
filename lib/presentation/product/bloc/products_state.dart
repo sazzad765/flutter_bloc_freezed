@@ -16,4 +16,5 @@ class ProductsState with _$ProductsState {
   const factory ProductsState.failure({
     required String message,
   }) = FailureState;
+
 }
