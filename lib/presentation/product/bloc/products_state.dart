@@ -16,8 +16,4 @@ class ProductsState with _$ProductsState {
   const factory ProductsState.failure({
     required String message,
   }) = FailureState;
-
-// const factory CommentUiState.viewAsUserDataSuccess({
-//   required UserData data,
-// }) = ViewAsUserDataSuccessState;
 }
