@@ -30,7 +30,7 @@ class ProductRepositoryImpl extends ProductRepository {
   @override
   Future<List<Product>> fetchProduct() async {
     try {
-      final response = await _dioClient.get('productss');
+      final response = await _dioClient.get('products');
       final data = response.data['products'];
       return List<Product>.from(data.map((x) => Product.fromJson(x)));
     } catch (e) {
